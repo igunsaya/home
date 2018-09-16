@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/thegrind/*"
+  to = "https://stoic-bartik-d89de9.netlify.com:splat"
+  status = 200
+  force = true
