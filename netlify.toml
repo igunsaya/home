@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/thegrind/*"
+  from = "/thegrind"
   to = "https://stoic-bartik-d89de9.netlify.com/"
   status = 200
   force = true
