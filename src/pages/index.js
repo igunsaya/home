@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Grid } from "grommet";
+import { Grid } from "grommet";
 
 import Main from "../components/Main"
 import ProjectCard from "../components/ProjectCard";
