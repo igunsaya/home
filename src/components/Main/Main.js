@@ -8,9 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Box, Grommet, Header, Heading } from "grommet"
 
-import "./Main.sass"
+import "../../css/main.scss"
 
 const Main = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,35 +22,21 @@ const Main = ({ children }) => {
     }
   `)
 
-  const theme = {
-    global: {
-      colors: {
-        "light-2": "#f5f5f5",
-        text: {
-          light: "rgba(0, 0, 0, 0.87)",
-        },
-      },
-      font: {
-        family: "Montserrat",
-        size: "12px",
-        height: "20px",
-      },
-    },
-  }
-
   return (
-    <Grommet theme={theme}>
-      <Box direction="column" pad="medium">
-        <Header>
-        <Heading level={1}>
-          {data.site.siteMetadata.title}
-          </Heading>
-        </Header>
-        <Box pad="medium">
+    <div className="container is-fluid">
+      <div>
+        <section class="hero">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">{data.site.siteMetadata.title}</h1>
+            </div>
+          </div>
+        </section>
+        <div>
           <main>{children}</main>
-        </Box>
-      </Box>
-    </Grommet>
+        </div>
+      </div>
+    </div>
   )
 }
 
